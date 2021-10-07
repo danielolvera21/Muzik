@@ -26,6 +26,13 @@ const muzikController = {
         res.status(400).json(err);
       });
   },
+
+  // create muzik, may need to be reworded depending on how we decide to place / add muzik
+  createMuzik({ body }, res) {
+    Pizza.create(body)
+      .then((dbMuzikData) => res.json(dbMuzikData))
+      .catch((err) => res.status(400).json(err));
+  },
 };
 
 module.exports = muzikController;
