@@ -129,3 +129,9 @@ li {
   border-color: yellowgreen;
   border-radius: 10px;
 }
+
+/* DONATIONS BOX */
+.donate-box {
+  background-color: yellowgreen;
+  color: rgb(50, 10, 53);
+}
