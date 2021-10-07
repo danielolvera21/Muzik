@@ -34,21 +34,33 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: var(--dark);
+  background: rgb(50, 10, 53);
   color: var(--light);
 
 }
 
+/* COMMON STYLING */
+
+.centered {
+  text-align: center;
+}
+
+/*HEADER AND NAV BAR STYLING */
 header {
   background-image: url("./assets/cover/cover-image.jpg");
   background-size: cover;
   background-position: 25%;
   background-attachment: fixed;
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
-/*HEADER AND NAV BAR STYLING */
 .header-title {
   color: white;
+  text-align: left;
+  margin-left: 176px;
 }
 
 li {
@@ -100,8 +112,20 @@ li {
   height: 250px;
   background-size: cover;
   background-position: center;
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
 }
-section h1 {
+
+
+/* ABOUT STYLING */
+.about-head {
   text-align: center;
   font-size: larger;
+}
+
+.about-border {
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
 }
