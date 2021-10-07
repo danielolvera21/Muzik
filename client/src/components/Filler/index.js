@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Filler() {
+function Fillerone() {
     return (
-        <section className = "filler">
+        <section className = "fillerone">
         </section>
     );
 }
 
-export default Filler;
+export default Fillerone;
