@@ -4,7 +4,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        //get all users
+        // get all users
         users: async () => {
             return User.find()
                 .select('-__v -password')
@@ -12,7 +12,7 @@ const resolvers = {
         },
 
         user: async (parent, { username }) => {
-            return User.find()
+            return User.findOne({ username })
                 .select('-__v -password')
                 .populate('friends');
         }
@@ -33,6 +33,13 @@ const resolvers = {
             }
 
             const token = signToken(user);
+            return { token, user };
+        },
+
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+
             return { token, user };
         }
     }
