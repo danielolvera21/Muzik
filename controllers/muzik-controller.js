@@ -33,6 +33,19 @@ const muzikController = {
       .then((dbMuzikData) => res.json(dbMuzikData))
       .catch((err) => res.status(400).json(err));
   },
+
+  // Update muzik by id
+  updateMuzik({ params, body }, res) {
+    Muzik.findOneAndUpdate({ _id: params.id }, body, { new: true })
+      .then((dbMuzikData) => {
+        if (!dbMuzikData) {
+          res.status(404).json({ message: "No Muzik found with this ID." });
+          return;
+        }
+        res.json(dbMuzikData);
+      })
+      .catch((err) => res.status(400).json(err));
+  },
 };
 
 module.exports = muzikController;
