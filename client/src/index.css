@@ -170,7 +170,7 @@ li {
 .contactform-container {
   background-image: url("./assets/cover/cover-image.jpg");
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 295px;
+  height: 360px;
   background-size: cover;
   border-radius: 10px;
   border-color: yellowgreen;
@@ -213,4 +213,10 @@ button {
   margin-bottom: 10px;
   margin-left: 400px;
   margin-right: 50px;
+}
+
+/* FOOTER STYLING */
+
+.footer {
+  background-color: black;
 }

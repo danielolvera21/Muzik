@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Donation from './components/Donation';
 import Fillerone from './components/Filler';
 import Fillertwo from './components/FillerTwo';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <Donation></Donation>
       </main>
       <footer>
-
+      <Footer></Footer>
       </footer>
       
     </div>
