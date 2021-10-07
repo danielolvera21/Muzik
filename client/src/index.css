@@ -45,6 +45,18 @@ body {
   text-align: center;
 }
 
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+a:hover {
+  color: rgb(32, 173, 3);
+  font-size: 25px;
+}
+
 /*HEADER AND NAV BAR STYLING */
 header {
   background-image: url("./assets/cover/cover-image.jpg");
@@ -134,4 +146,41 @@ li {
 .donate-box {
   background-color: yellowgreen;
   color: rgb(50, 10, 53);
+}
+
+/* CONTACT FORM CONTAINER */
+.contactform-container {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 295px;
+  background-size: cover;
+  border-radius: 10px;
+  border-color: yellowgreen;
+  border-style: solid;
+  color: #000000;
+}
+
+button:hover {
+  background-color: rgb(50, 10, 53);
+  color: yellowgreen;
+  border-radius: 10px;
+}
+
+button {
+  background-color: yellowgreen;
+  color: rgb(50, 10, 53);
+  border-radius: 10px;
+}
+
+/* FILLER STYLING */
+
+.filler {
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+  
 }

@@ -3,8 +3,8 @@ import React from 'react';
 function Contact() {
 
     return(
-    <section>
-      <h1>Contact US</h1>
+    <section className = "contactform-container" id = "contact-us">
+      <h1>Contact Us</h1>
       <form id="contact-form">
         <div>
             <label htmlFor="name">Name:</label>

@@ -27,9 +27,13 @@ function Nav() {
                     <li className="mx-2">
                         <a href = "#about">About Muzik</a>
                     </li>
-                    <li>
-                        <span>Contact</span>
+                    <li className="mx-2">
+                        <a href = "#contact-us">Reach Out</a>
                     </li>
+                    <li className="mx-2">
+                        <a href = "#contributions">Donate to the Cause</a>
+                    </li>
+
                     {categories.map((category) => (
                         //define onclick event in span with onclick method, define function above return
                         <li className= "mx-2" key ={category.name}>
