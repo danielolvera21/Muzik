@@ -1,4 +1,4 @@
-const { Muzik } = require("../models");
+const { Muzik, Pizza } = require("../models");
 
 const muzikController = {
   getAllMuzik(req, res) {
@@ -13,14 +13,12 @@ const muzikController = {
   // get Muzik by id
   getMuzikById({ params }, res) {
     Muzik.findOne({ _id: params.id })
-      .then((dbMuzikData) => {
-        // if no muzik is found, send 404
-        if (!dbMuzikData) {
-          res.status(404).json({ message: "No muzik found with this ID." });
-          return;
-        }
-        res.json(dbMuzikData);
+      .populate({
+        path: "comments",
+        select: "-__v",
       })
+      .select("-__v")
+      .then((dbMuzikData) => res.json(dbMuzikData))
       .catch((err) => {
         console.log(err);
         res.status(400).json(err);
@@ -45,6 +43,13 @@ const muzikController = {
         res.json(dbMuzikData);
       })
       .catch((err) => res.status(400).json(err));
+  },
+
+  // delete muzik
+  deleteMuzik({ params }, res) {
+    Pizza.findOneAndDelete({ _id: params.id })
+      .then((dbMuzikData) => res.json(dbMuzikData))
+      .catch((err) => res.json(err));
   },
 };
 
