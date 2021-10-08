@@ -5,8 +5,8 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: rgb(50, 10, 53);
-  --secondary: #F3A847;
+  --primary: rgb(35, 2, 37);
+  --secondary: ;
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #000000;
@@ -34,7 +34,7 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: rgb(50, 10, 53);
+  background: var(--primary);
   color: var(--light);
 
 }
@@ -58,18 +58,25 @@ a:visited {
   color: white;
   background-color: rgba(50, 10, 53, 0.822);
   border-style: solid;
-  border-color:var(--primary);
   border-radius: 10px;
 }
 
 a:hover {
-  color: rgb(32, 173, 3);
+  color: rgb(50, 10, 53);
   font-size: 25px;
   background-color: rgba(255, 255, 255, 0.63);
   border-style: solid;
   border-color: rgb(50, 10, 53) ;
   border-radius: 10px;
+}
 
+a.monay:hover{
+  color: Wheat;
+  font-size: 25px;
+  background-color: rgba(10, 97, 9, 0.788);
+  border-style: solid;
+  border-color: wheat;
+  border-radius: 10px;
 }
 
 header {
@@ -78,7 +85,7 @@ header {
   background-position: 25%;
   background-attachment: fixed;
   border-style: solid;
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 10px;
   margin-bottom: 5px;
 }
@@ -87,6 +94,10 @@ header {
   color: white;
   text-align: left;
   margin-left: 176px;
+}
+
+.navbar-end {
+  align-items: left;
 }
 
 li {
@@ -139,7 +150,7 @@ li {
   background-size: cover;
   background-position: center;
   border-style: solid;
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 10px;
 }
 
@@ -152,42 +163,88 @@ li {
 
 .about-border {
   border-style: solid;
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.384);
+  margin-bottom: 10px;
 }
 
 /* DONATIONS BOX */
 .donate-box {
-  background-color: yellowgreen;
+  background-image: url('./assets/cover/donate-filler-image.jpg');
+  background-attachment: fixed;
+  background-size: cover;
   border-radius: 15px;
   color: rgb(50, 10, 53);
-  height: 100px;
+  height: 300px;
   padding-top: 10px;
-  margin: 50px 50px;
+  margin: 0px 70px;
 }
 
-/* CONTACT FORM CONTAINER */
+.donate-title{
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px; 
+  border-radius: 10px;
+  width: 400px;
+  margin-left: 400px;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+/* CONTACT BOX CONTAINER */
 .contactform-container {
   background-image: url("./assets/cover/cover-image.jpg");
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 360px;
+  height: 410px;
   background-size: cover;
   border-radius: 10px;
-  border-color: yellowgreen;
+  border-color: rgb(0, 0, 163);
   border-style: solid;
   color: #000000;
+}
+
+.contitle{
+    font-size: 36px;
+    color: white;
+}
+
+.conname{
+margin-left: 477px;
+margin-bottom: 5px;
+color: white;
+}
+
+.conaddress {
+color: white;
+margin-left: 397px;
+margin-bottom: 5px;
+}
+
+.conmessage {
+color: white;
+margin-left: 452px;
+}
+
+.conerror {
+  color: red;
+  font-size: large;
+  text-align: center;
 }
 
 button:hover {
   background-color: rgb(50, 10, 53);
   color: yellowgreen;
   border-radius: 10px;
+  margin-left: 612px ;
 }
 
 button {
   background-color: yellowgreen;
   color: rgb(50, 10, 53);
   border-radius: 10px;
+  margin-left: 612px;
 }
 
 /* FILLER STYLING */
@@ -215,8 +272,60 @@ button {
   margin-right: 50px;
 }
 
+.fillerdonateone {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 50px;
+}
+
+.fillerdonatetwo {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 400px;
+}
+
+.fillerdonatethree {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 425px;
+  margin-right: 425px;
+}
+
+.fillerdonatefour{
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 150px;
+}
+
 /* FOOTER STYLING */
 
 .footer {
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.384);
+  border-radius: 10px;
+  text-align: center;
+  margin: 0px 10px 15px 10px;
+  border-style: solid;
 }
