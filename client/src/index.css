@@ -71,11 +71,11 @@ a:hover {
 }
 
 a.monay:hover{
-  color: rgb(11, 97, 9);
+  color: Wheat;
   font-size: 25px;
-  background-color: rgba(153, 205, 50, 0.699);
+  background-color: rgba(10, 97, 9, 0.788);
   border-style: solid;
-  border-color: rgb(11, 97, 9) ;
+  border-color: wheat;
   border-radius: 10px;
 }
 
@@ -193,28 +193,58 @@ li {
   border-style: solid;
 }
 
-/* CONTACT FORM CONTAINER */
+/* CONTACT BOX CONTAINER */
 .contactform-container {
   background-image: url("./assets/cover/cover-image.jpg");
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 360px;
+  height: 410px;
   background-size: cover;
   border-radius: 10px;
-  border-color: yellowgreen;
+  border-color: rgb(0, 0, 163);
   border-style: solid;
   color: #000000;
+}
+
+.contitle{
+    font-size: 36px;
+    color: white;
+}
+
+.conname{
+margin-left: 477px;
+margin-bottom: 5px;
+color: white;
+}
+
+.conaddress {
+color: white;
+margin-left: 397px;
+margin-bottom: 5px;
+}
+
+.conmessage {
+color: white;
+margin-left: 452px;
+}
+
+.conerror {
+  color: red;
+  font-size: large;
+  text-align: center;
 }
 
 button:hover {
   background-color: rgb(50, 10, 53);
   color: yellowgreen;
   border-radius: 10px;
+  margin-left: 612px ;
 }
 
 button {
   background-color: yellowgreen;
   color: rgb(50, 10, 53);
   border-radius: 10px;
+  margin-left: 612px;
 }
 
 /* FILLER STYLING */
@@ -289,11 +319,13 @@ button {
   margin-left: 550px;
   margin-right: 150px;
 }
+
 /* FOOTER STYLING */
 
 .footer {
   background-color: rgba(255, 255, 255, 0.384);
   border-radius: 10px;
   text-align: center;
-  margin: 0px 10px;
+  margin: 0px 10px 15px 10px;
+  border-style: solid;
 }
