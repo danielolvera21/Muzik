@@ -1,0 +1,222 @@
+
+main {
+	margin: 0 auto;
+	max-width: 90%;
+  padding: 50px 30px;
+}
+:root {
+  --primary: rgb(50, 10, 53);
+  --secondary: #F3A847;
+  --tertiary: #B12704;
+  --light: #fafafa;
+  --dark: #000000;
+  --darker: #111111;
+  --error: rgb(228, 46, 1);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-five: calc(2.5rem);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: .1em;
+  background: rgb(50, 10, 53);
+  color: var(--light);
+
+}
+
+/* COMMON STYLING */
+.centered {
+  text-align: center;
+}
+
+/*HEADER AND NAV BAR STYLING */
+a:link {
+  color: white;
+  background-color: rgba(50, 10, 53, 0.822);
+  border-style: none;
+  border-color:var(--primary);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+a:visited {
+  color: white;
+  background-color: rgba(50, 10, 53, 0.822);
+  border-style: solid;
+  border-color:var(--primary);
+  border-radius: 10px;
+}
+
+a:hover {
+  color: rgb(32, 173, 3);
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.63);
+  border-style: solid;
+  border-color: rgb(50, 10, 53) ;
+  border-radius: 10px;
+
+}
+
+header {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-position: 25%;
+  background-attachment: fixed;
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.header-title {
+  color: white;
+  text-align: left;
+  margin-left: 176px;
+}
+
+li {
+  list-style: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.mx-1 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
+}
+
+.mx-2 {
+  margin-right: var(--spacing-two);
+  margin-left: var(--spacing-two);
+}
+
+.my-1 {
+  margin-top: var(--spacing-one);
+  margin-bottom: var(--spacing-one);
+}
+
+.my-2 {
+  margin-top: var(--spacing-two);
+  margin-bottom: var(--spacing-two);
+}
+
+.my-5 {
+  margin-top: var(--spacing-five);
+  margin-bottom: var(--spacing-five);
+}
+
+/* HERO STYLING */
+.hero {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
+}
+
+
+/* ABOUT STYLING */
+.about-head {
+  text-align: center;
+  font-size: larger;
+}
+
+.about-border {
+  border-style: solid;
+  border-color: yellowgreen;
+  border-radius: 10px;
+}
+
+/* DONATIONS BOX */
+.donate-box {
+  background-color: yellowgreen;
+  border-radius: 15px;
+  color: rgb(50, 10, 53);
+  height: 100px;
+  padding-top: 10px;
+  margin: 50px 50px;
+}
+
+/* CONTACT FORM CONTAINER */
+.contactform-container {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 360px;
+  background-size: cover;
+  border-radius: 10px;
+  border-color: yellowgreen;
+  border-style: solid;
+  color: #000000;
+}
+
+button:hover {
+  background-color: rgb(50, 10, 53);
+  color: yellowgreen;
+  border-radius: 10px;
+}
+
+button {
+  background-color: yellowgreen;
+  color: rgb(50, 10, 53);
+  border-radius: 10px;
+}
+
+/* FILLER STYLING */
+.fillerone {
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 400px;
+}
+
+.fillertwo {
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 400px;
+  margin-right: 50px;
+}
+
+/* FOOTER STYLING */
+
+.footer {
+  background-color: black;
+}
