@@ -8,6 +8,10 @@ import Fillerone from './components/Filler';
 import Fillertwo from './components/FillerTwo';
 import Footer from './components/Footer';
 import './App.css';
+import DonationFillerOne from './components/DonationFillerOne';
+import DonationFillerTwo from './components/DonationFillerTwo';
+import DonationFillerThree from './components/DonationFillerThree';
+import DonationFillerFour from './components/DonationFillerFour';
 
 function App() {
   
@@ -24,6 +28,7 @@ function App() {
       <Hero></Hero>
       <About></About>
       <main>
+      <Fillerone></Fillerone>
       <Fillertwo></Fillertwo>
       <Fillerone></Fillerone>
       <Contact></Contact>
@@ -31,7 +36,13 @@ function App() {
       </main>
       </>
       ) : (
+        <main>
+        <DonationFillerFour></DonationFillerFour>
         <Donation></Donation>
+        <DonationFillerTwo></DonationFillerTwo>
+        <DonationFillerOne></DonationFillerOne>
+        <DonationFillerThree></DonationFillerThree>
+        </main>
       )}
       <footer>
       <Footer></Footer>

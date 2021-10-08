@@ -2,7 +2,6 @@ import React from 'react';
 
 function Nav(props) {
     const {
-        contactSelected,
         setContactSelected,
       } = props;
 
@@ -19,10 +18,10 @@ function Nav(props) {
                         <a href = "#contact-us" onClick = {() => setContactSelected(false)}>Reach Out</a>
                     </li>
                     <li className="mx-2">
-                        <a href = "#contributions" onClick = {() => setContactSelected(true)}>Donate to the Cause</a>
+                        <a className = "monay" href = "#contributions" onClick = {() => setContactSelected(true)}>Donate to the Cause</a>
                     </li>
                     <li className="mx-2">
-                        <a href = "#rated" onClick = {() => setContactSelected(false)}>Rated Bands</a>
+                        <a href = "#search" onClick = {() => setContactSelected(false)}>Search Bands</a>
                     </li><li className="mx-2">
                         <a href = "#snips" onClick = {() => setContactSelected(false)}>LIVE Snippets</a>
                     </li>
