@@ -1,30 +1,35 @@
 import React from 'react';
 
-function Nav() {
+function Nav(props) {
+    const {
+        contactSelected,
+        setContactSelected,
+      } = props;
 
     return (
       <header>
         <h1 className = "header-title">Muzik</h1>
+            
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href = "#about">About Muzik</a>
+                        <a href = "#about" onClick = {() => setContactSelected(false)}>About Muzik</a>
                     </li>
                     <li className="mx-2">
-                        <a href = "#contact-us">Reach Out</a>
+                        <a href = "#contact-us" onClick = {() => setContactSelected(false)}>Reach Out</a>
                     </li>
                     <li className="mx-2">
-                        <a href = "#contributions">Donate to the Cause</a>
+                        <a href = "#contributions" onClick = {() => setContactSelected(true)}>Donate to the Cause</a>
                     </li>
                     <li className="mx-2">
-                        <a href = "#rated">Rated Bands</a>
+                        <a href = "#rated" onClick = {() => setContactSelected(false)}>Rated Bands</a>
                     </li><li className="mx-2">
-                        <a href = "#snips">LIVE Snippets</a>
+                        <a href = "#snips" onClick = {() => setContactSelected(false)}>LIVE Snippets</a>
                     </li>
             </ul>
         </nav>
       </header>
     );
-}
+    }
 
 export default Nav;

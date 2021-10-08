@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Hero from './components/Hero';
@@ -10,18 +10,29 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  
+  const [contactSelected, setContactSelected] = useState(false);
+
   return (
     <div>
-      <Nav></Nav>
+      <Nav
+      contactSelected={contactSelected}
+      setContactSelected={setContactSelected}
+      ></Nav>
+      {!contactSelected ? (
+        <>
       <Hero></Hero>
-      <main>
       <About></About>
+      <main>
       <Fillertwo></Fillertwo>
       <Fillerone></Fillerone>
       <Contact></Contact>
       <Fillertwo></Fillertwo>
-      <Donation></Donation>
       </main>
+      </>
+      ) : (
+        <Donation></Donation>
+      )}
       <footer>
       <Footer></Footer>
       </footer>
