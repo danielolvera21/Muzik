@@ -21,7 +21,8 @@ function Nav(props) {
               }`}
               key={category.name}
             >
-              <span
+              <span 
+              className="nav-buttons"
                 onClick={() => {
                   setCurrentCategory(category);
                 }}
