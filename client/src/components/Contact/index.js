@@ -25,13 +25,13 @@ function Contact() {
    
        // isValid conditional statement
            if (!isValid) {
-               setErrorMessage('Your email is invalid.');
+               setErrorMessage('**Your email is invalid.**');
            } else {
                setErrorMessage('');
            }  
        } else {
            if (!e.target.value.length) {
-           setErrorMessage(`${e.target.name} is required.`);
+           setErrorMessage(`**${e.target.name} is required.**`);
        } else {
          setErrorMessage('');
        }
@@ -40,25 +40,26 @@ function Contact() {
 
     return(
     <section className = "contactform-container" id = "contact-us">
-      <h1>Contact Us</h1>
+      <h1 className= "centered contitle">Contact Us</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
+
+        <div className= "conname">
             <label htmlFor="name">Name:</label>
               {/* add default , sync state of component using onChange attribute and function handleChange defined above */}
               <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
         </div>
-        <div>
+        <div className = "conaddress">
             <label htmlFor="email">Email address:</label>
             <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
         </div>
-        <div>
+        <div className = "conmessage">
             <label htmlFor="message">Message:</label>
             <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
         </div>
 
         {/* render error message in div */}
         {errorMessage && (
-            <div>
+            <div className = "conerror">
             <p className="error-text">{errorMessage}</p>
             </div>
         )}

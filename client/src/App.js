@@ -7,6 +7,10 @@ import Donation from "./components/Donation";
 import SearchArtist from "./components/SearchArtist";
 import Footer from "./components/Footer";
 import "./App.css";
+import DonationFillerOne from './components/DonationFillerOne';
+import DonationFillerTwo from './components/DonationFillerTwo';
+import DonationFillerThree from './components/DonationFillerThree';
+import DonationFillerFour from './components/DonationFillerFour';
 
 function App() {
   const [categories] = useState([
@@ -31,7 +35,11 @@ function App() {
       ) : currentCategory.name === "contact" ? (
         <Contact></Contact>
       ) : currentCategory.name === "donate" ? (
+        <DonationFillerFour></DonationFillerFour>
         <Donation></Donation>
+        <DonationFillerTwo></DonationFillerTwo>
+        <DonationFillerOne></DonationFillerOne>
+        <DonationFillerThree></DonationFillerThree>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>
       ) : (
