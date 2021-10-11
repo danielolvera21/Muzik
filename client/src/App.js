@@ -13,6 +13,7 @@ import DonationFillerThree from './components/DonationFillerThree';
 import DonationFillerFour from './components/DonationFillerFour';
 
 function App() {
+
   const [categories] = useState([
     { name: "about", description: "about the website" },
     { name: "contact", description: "contact us" },
@@ -23,9 +24,11 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+
   return (
     <div>
       <Nav
+
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
@@ -44,10 +47,12 @@ function App() {
         <SearchArtist></SearchArtist>
       ) : (
         <></>
+
       )}
       <footer>
         <Footer></Footer>
       </footer>
+
     </div>
   );
 }
