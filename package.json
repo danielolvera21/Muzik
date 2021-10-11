@@ -22,5 +22,8 @@
   "homepage": "https://github.com/danielolvera21/Muzik#readme",
   "devDependencies": {
     "concurrently": "^6.3.0"
+  },
+  "dependencies": {
+    "mongoose": "^6.0.10"
   }
 }

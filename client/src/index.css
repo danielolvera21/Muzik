@@ -224,13 +224,17 @@ margin-bottom: 5px;
 
 .conmessage {
 color: white;
-margin-left: 452px;
+margin-left: 455px;
 }
 
 .conerror {
   color: red;
   font-size: large;
   text-align: center;
+}
+
+.message-title {
+  padding-bottom: 50px;
 }
 
 button:hover {
@@ -321,11 +325,18 @@ button {
 }
 
 /* FOOTER STYLING */
-
 .footer {
   background-color: rgba(255, 255, 255, 0.384);
   border-radius: 10px;
   text-align: center;
   margin: 0px 10px 15px 10px;
   border-style: solid;
+}
+
+.rounded-edge {
+  border-radius: 55px;
+}
+
+.rounded-edge-message {
+  border-radius: 18px;
 }

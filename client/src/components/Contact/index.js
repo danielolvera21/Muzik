@@ -46,15 +46,15 @@ function Contact() {
         <div className= "conname">
             <label htmlFor="name">Name:</label>
               {/* add default , sync state of component using onChange attribute and function handleChange defined above */}
-              <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
+              <input className = "rounded-edge" type="text" defaultValue={name} onBlur={handleChange} name="name" />
         </div>
         <div className = "conaddress">
             <label htmlFor="email">Email address:</label>
-            <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
+            <input className = "rounded-edge" type="email" defaultValue={email} onBlur={handleChange} name="email" />
         </div>
         <div className = "conmessage">
-            <label htmlFor="message">Message:</label>
-            <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+            <label className = "message-title"  htmlFor="message">Message:</label>
+            <textarea className = "rounded-edge-message" name="message" rows="2" defaultValue={message} onBlur={handleChange} />
         </div>
 
         {/* render error message in div */}
