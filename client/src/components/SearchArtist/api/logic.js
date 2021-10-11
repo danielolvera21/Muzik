@@ -12,14 +12,10 @@ var artistSearch = function (searchType, artistName) {
   var apiString = apiUrl
     .replace("{searchType}", searchType)
     .replace("{queryParameter}", artistName);
-  fetch(apiString).then(function (response) {
-    console.log(response.json());
-    return response.json();
-  })
-  .then(function(data){
-    console.log(data);
-  })
-  ;
-}
+  return fetch(apiString)
+    .then(function (response) {
+      return response.json();
+    })
+};
 
 export default artistSearch;

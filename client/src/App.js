@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 import About from "./components/About";
-import Hero from "./components/Hero";
+//import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Donation from "./components/Donation";
-import Fillerone from "./components/Filler";
-import Fillertwo from "./components/FillerTwo";
+import SearchArtist from "./components/SearchArtist";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -34,7 +33,7 @@ function App() {
       ) : currentCategory.name === "donate" ? (
         <Donation></Donation>
       ) : currentCategory.name === "search" ? (
-        <Fillertwo></Fillertwo>
+        <SearchArtist></SearchArtist>
       ) : (
         <></>
       )}
