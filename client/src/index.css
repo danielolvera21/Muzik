@@ -205,7 +205,7 @@ button {
   background-image: url("./assets/cover/cover-image.jpg");
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 100px;
+  height: 100%;
 }
 
 .searched-artist {
