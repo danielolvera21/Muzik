@@ -38,11 +38,13 @@ function App() {
       ) : currentCategory.name === "contact" ? (
         <Contact></Contact>
       ) : currentCategory.name === "donate" ? (
-        <DonationFillerFour></DonationFillerFour>
-        <Donation></Donation>
-        <DonationFillerTwo></DonationFillerTwo>
-        <DonationFillerOne></DonationFillerOne>
-        <DonationFillerThree></DonationFillerThree>
+        <main>
+          <DonationFillerFour></DonationFillerFour>
+          <Donation></Donation>
+          <DonationFillerTwo></DonationFillerTwo>
+          <DonationFillerOne></DonationFillerOne>
+          <DonationFillerThree></DonationFillerThree>
+        </main>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>
       ) : (
