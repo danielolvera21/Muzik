@@ -16,7 +16,7 @@ function Nav(props) {
         <ul className="flex-row">
           {categories.map((category) => (
             <li
-              className={`mx-2 ${
+              className={`mx-2 nav-buttons ${
                 currentCategory.name === category.name && "navActive"
               }`}
               key={category.name}

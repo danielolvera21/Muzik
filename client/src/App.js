@@ -11,6 +11,7 @@ import DonationFillerOne from './components/DonationFillerOne';
 import DonationFillerTwo from './components/DonationFillerTwo';
 import DonationFillerThree from './components/DonationFillerThree';
 import DonationFillerFour from './components/DonationFillerFour';
+import Filler from './components/Filler';
 
 function App() {
 
@@ -28,21 +29,26 @@ function App() {
   return (
     <div>
       <Nav
-
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       ></Nav>
       {currentCategory.name === "about" ? (
+        <main>
+        <Filler></Filler>
         <About></About>
+        <Filler></Filler>
+        </main>
       ) : currentCategory.name === "contact" ? (
         <Contact></Contact>
       ) : currentCategory.name === "donate" ? (
+        <main>
         <DonationFillerFour></DonationFillerFour>
         <Donation></Donation>
         <DonationFillerTwo></DonationFillerTwo>
         <DonationFillerOne></DonationFillerOne>
         <DonationFillerThree></DonationFillerThree>
+        </main>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>
       ) : (

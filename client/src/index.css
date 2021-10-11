@@ -63,7 +63,6 @@ body {
   border-style: solid;
 }
 
-<<<<<<< HEAD
 a.monay:hover{
   color: rgba(0, 0, 0, 0);
   font-size: 25px;
@@ -72,13 +71,6 @@ a.monay:hover{
   border-style: solid;
   border-color: rgb(57, 112, 54);
   border-radius: 10px;
-=======
-.nav-buttons:hover {
-  color: rgb(32, 173, 3);
-  background-color: rgba(255, 255, 255, 0.63);
-  border-style: solid;
-  border-color: rgb(50, 10, 53);
->>>>>>> c380a5716f23efa132372fa88cfd42cf35c66a3c
 }
 
 header {
@@ -339,7 +331,6 @@ button {
   border-style: solid;
 }
 
-<<<<<<< HEAD
 .rounded-edge {
   border-radius: 55px;
 }
@@ -347,5 +338,3 @@ button {
 .rounded-edge-message {
   border-radius: 18px;
 }
-=======
->>>>>>> c380a5716f23efa132372fa88cfd42cf35c66a3c
