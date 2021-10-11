@@ -14,40 +14,40 @@ import DonationFillerThree from './components/DonationFillerThree';
 import DonationFillerFour from './components/DonationFillerFour';
 
 function App() {
-  
+
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
       <Nav
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       {!contactSelected ? (
         <>
-      <Hero></Hero>
-      <About></About>
-      <main>
-      <Fillerone></Fillerone>
-      <Fillertwo></Fillertwo>
-      <Fillerone></Fillerone>
-      <Contact></Contact>
-      <Fillertwo></Fillertwo>
-      </main>
-      </>
+          <Hero></Hero>
+          <About></About>
+          <main>
+            <Fillerone></Fillerone>
+            <Fillertwo></Fillertwo>
+            <Fillerone></Fillerone>
+            <Contact></Contact>
+            <Fillertwo></Fillertwo>
+          </main>
+        </>
       ) : (
         <main>
-        <DonationFillerFour></DonationFillerFour>
-        <Donation></Donation>
-        <DonationFillerTwo></DonationFillerTwo>
-        <DonationFillerOne></DonationFillerOne>
-        <DonationFillerThree></DonationFillerThree>
+          <DonationFillerFour></DonationFillerFour>
+          <Donation></Donation>
+          <DonationFillerTwo></DonationFillerTwo>
+          <DonationFillerOne></DonationFillerOne>
+          <DonationFillerThree></DonationFillerThree>
         </main>
       )}
       <footer>
-      <Footer></Footer>
+        <Footer></Footer>
       </footer>
-      
+
     </div>
   );
 }
