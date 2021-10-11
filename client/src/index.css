@@ -1,13 +1,12 @@
-
 main {
-	margin: 0 auto;
-	max-width: 90%;
+  margin: 0 auto;
+  max-width: 90%;
   padding: 50px 30px;
 }
 :root {
-  --primary: rgb(35, 2, 37);
-  --secondary: ;
-  --tertiary: #B12704;
+  --primary: rgb(50, 10, 53);
+  --secondary: #f3a847;
+  --tertiary: #b12704;
   --light: #fafafa;
   --dark: #000000;
   --darker: #111111;
@@ -15,7 +14,6 @@ main {
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
-
 }
 
 * {
@@ -33,10 +31,9 @@ body {
   font-weight: 600;
   line-height: 1.5;
   font-size: 18px;
-  letter-spacing: .1em;
-  background: var(--primary);
+  letter-spacing: 0.1em;
+  background: rgb(50, 10, 53);
   color: var(--light);
-
 }
 
 /* COMMON STYLING */
@@ -45,31 +42,28 @@ body {
 }
 
 /*HEADER AND NAV BAR STYLING */
-a:link {
-  color: white;
-  background-color: rgba(50, 10, 53, 0.822);
-  border-style: none;
-  border-color:var(--primary);
-  border-radius: 10px;
-  padding: 10px 20px;
-}
 
-a:visited {
-  color: white;
-  background-color: rgba(50, 10, 53, 0.822);
-  border-style: solid;
+.nav-buttons {
+  width: 150px;
+  height: 40px;
+  display: inline-block;
   border-radius: 10px;
-}
-
-a:hover {
-  color: rgb(50, 10, 53);
   font-size: 25px;
-  background-color: rgba(255, 255, 255, 0.63);
-  border-style: solid;
-  border-color: rgb(50, 10, 53) ;
-  border-radius: 10px;
+  color: white;
+  background-color: rgba(50, 10, 53, 0.822);
+  border-color: var(--primary);
+  padding-left: 10px;
 }
 
+.nav-buttons:link {
+  border-style: none;
+}
+
+.nav-buttons:visited {
+  border-style: solid;
+}
+
+<<<<<<< HEAD
 a.monay:hover{
   color: rgba(0, 0, 0, 0);
   font-size: 25px;
@@ -78,6 +72,13 @@ a.monay:hover{
   border-style: solid;
   border-color: rgb(57, 112, 54);
   border-radius: 10px;
+=======
+.nav-buttons:hover {
+  color: rgb(32, 173, 3);
+  background-color: rgba(255, 255, 255, 0.63);
+  border-style: solid;
+  border-color: rgb(50, 10, 53);
+>>>>>>> c380a5716f23efa132372fa88cfd42cf35c66a3c
 }
 
 header {
@@ -154,7 +155,6 @@ li {
   border-color: black;
   border-radius: 10px;
 }
-
 
 /* ABOUT STYLING */
 .about-head {
@@ -270,11 +270,16 @@ button {
   background-image: url("./assets/cover/cover-image.jpg");
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 400px;
-  margin-right: 50px;
+  height: 100%;
+}
+
+.searched-artist {
+  width: 100%;
+  text-align: center;
+}
+
+.artist-search-button {
+  width: 100%;
 }
 
 .fillerdonateone {
@@ -334,6 +339,7 @@ button {
   border-style: solid;
 }
 
+<<<<<<< HEAD
 .rounded-edge {
   border-radius: 55px;
 }
@@ -341,3 +347,5 @@ button {
 .rounded-edge-message {
   border-radius: 18px;
 }
+=======
+>>>>>>> c380a5716f23efa132372fa88cfd42cf35c66a3c
