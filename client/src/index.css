@@ -71,11 +71,12 @@ a:hover {
 }
 
 a.monay:hover{
-  color: Wheat;
+  color: rgba(0, 0, 0, 0);
   font-size: 25px;
-  background-color: rgba(10, 97, 9, 0.788);
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
   border-style: solid;
-  border-color: wheat;
+  border-color: rgb(57, 112, 54);
   border-radius: 10px;
 }
 
@@ -326,7 +327,7 @@ button {
 
 /* FOOTER STYLING */
 .footer {
-  background-color: rgba(255, 255, 255, 0.384);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
   text-align: center;
   margin: 0px 10px 15px 10px;
