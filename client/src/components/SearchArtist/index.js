@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Search from "./search";
 import Artist from "./artist";
+import Profile from "./artistprofile";
 
 var apiKey = "MjM4MDM5MDN8MTYzMzY1Mjk1MC45NTUyODc1";
 var clientSecret =
@@ -80,7 +81,13 @@ function SearchArtist() {
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : artistSelected ? (
-          <></>
+          events.events.map((events, index) => {
+            return (
+              <div key={`${index}-${events.id}`}>
+                <Profile event={events}></Profile>
+              </div>
+            );
+          })
         ) : (
           artists.performers.map((performer, index) => {
             return (
