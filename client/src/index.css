@@ -93,22 +93,27 @@ header {
   color: white;
   text-align: left;
   margin-left: 176px;
-  margin-bottom: 0;
+}
+
+.loginStuff {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+
+.loginSpacing {
+  background-color: green;
+  border-style: solid;
+  border-color: green;
+  margin: auto 0px auto 0px;
 }
 
 .login-button {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: right;
-  margin-right: 176px;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 .signup-button {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: right;
-  margin-right: 176px;
-  margin-top: 0;
 }
 
 header a:link {
@@ -214,9 +219,9 @@ nav li:hover {
   background-size: cover;
   border-radius: 15px;
   color: rgb(50, 10, 53);
-  height: 300px;
+  height: 275px;
   padding-top: 10px;
-  margin: 0px 70px;
+  margin: 0px 70px 10px 70px;
 }
 
 .donate-title {
@@ -226,7 +231,20 @@ nav li:hover {
   font-size: 26px;
   border-radius: 10px;
   width: 400px;
-  margin-left: 400px;
+  margin: 0px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.donate-slide-pay{
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px;
+  border-radius: 10px;
+  height: 150px;
+  width: 400px;
+  margin: 55px auto;
   border-color: var(--primary);
   border-style: solid;
 }
@@ -235,34 +253,41 @@ nav li:hover {
 .contactform-container {
   background-image: url("./assets/cover/cover-image.jpg");
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 410px;
+  background-position: 80%;
+  height: 510px;
   background-size: cover;
   border-radius: 10px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0);
   border-style: solid;
   color: black;
+  margin: 10px 25px;
 }
 
 .contitle {
   font-size: 36px;
+  text-align: center;
   color: white;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+  border-color: var(--primary);
+  border-style: solid;
 }
 
 .conname {
-  margin-left: 477px;
-  margin-bottom: 5px;
-  color: white;
+  margin: 10px auto;
+  color: black;
 }
 
 .conaddress {
-  color: white;
-  margin-left: 397px;
-  margin-bottom: 5px;
+  color: black;
+  margin: 10px auto;
 }
 
 .conmessage {
-  color: white;
-  margin-left: 455px;
+  color: black;
+  margin: 10px auto;
 }
 
 .conerror {
@@ -274,26 +299,55 @@ nav li:hover {
   border-color: red;
   border-radius: 10px;
   width: 400px;
-  margin-left: 455px;
-  margin-bottom: 8px;
+  margin: 0px auto 10px auto;
+}
+
+.center-button {
+  text-align: center;
 }
 
 .message-title {
   padding-bottom: 50px;
 }
 
-button {
-  background-color: yellowgreen;
-  color: rgb(50, 10, 53);
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: black;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
   border-radius: 10px;
-  margin-left: 612px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contact-form input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+button {
+  background-color: rgb(50, 10, 53);
+  color: White;
+  border-radius: 10px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: white;
 }
 
 button:hover {
-  background-color: rgb(50, 10, 53);
-  color: yellowgreen;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(50, 10, 53);
   border-radius: 10px;
-  margin-left: 612px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: rgb(50, 10, 53);
 }
 
 /* FILLER STYLING */
@@ -348,7 +402,6 @@ button:hover {
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
   height: 100px;
-  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 50px;
   margin-right: 400px;
@@ -372,7 +425,6 @@ button:hover {
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
   height: 100px;
-  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 550px;
   margin-right: 150px;
