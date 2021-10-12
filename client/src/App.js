@@ -53,11 +53,11 @@ function App() {
         <Contact></Contact>
       ) : currentCategory.name === "donate" ? (
         <main>
-        <DonationFillerFour></DonationFillerFour>
-        <Donation></Donation>
-        <DonationFillerTwo></DonationFillerTwo>
-        <DonationFillerOne></DonationFillerOne>
-        <DonationFillerThree></DonationFillerThree>
+          <DonationFillerFour></DonationFillerFour>
+          <Donation></Donation>
+          <DonationFillerTwo></DonationFillerTwo>
+          <DonationFillerOne></DonationFillerOne>
+          <DonationFillerThree></DonationFillerThree>
         </main>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>
