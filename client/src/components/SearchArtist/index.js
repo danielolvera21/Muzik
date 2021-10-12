@@ -20,6 +20,7 @@ var eventAPI =
 
 function SearchArtist() {
   const [artistSelected, setArtistSelected] = useState(false);
+  const [selectedArtist, setSelectedArtist] = useState({});
   const [loading, setLoading] = useState(false);
   const [artists, setArtists] = useState({
     performers: [],
@@ -47,7 +48,7 @@ function SearchArtist() {
 
     callApi(apiString).then((jsonResponse) => {
       if (!jsonResponse.message) {
-        setArtists({ ...jsonResponse });
+        setArtists(jsonResponse);
         setLoading(false);
       } else {
         setErrorMessage(jsonResponse.message);
@@ -64,7 +65,7 @@ function SearchArtist() {
 
     callApi(apiString).then((jsonResponse) => {
       if (!jsonResponse.message) {
-        setEvents({ ...jsonResponse });
+        setEvents(jsonResponse);
         setLoading(false);
       } else {
         setErrorMessage(jsonResponse.message);
@@ -85,20 +86,49 @@ function SearchArtist() {
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : artistSelected ? (
-          event.events.map((events, index) => {
-            return (
-              <div key={`${index}-${events.id}`}>
-                <h1>{events.title}</h1>
-                <p>{events.venue.name}</p>
-              </div>
-            );
-          })
+          event.events.length === 0 ? (
+            <span>
+              <Artist artist={selectedArtist}></Artist>
+              <p>no upcoming events</p>
+            </span>
+          ) : (
+            <span>
+              <Artist artist={selectedArtist}></Artist>
+              {event.events.map((event, index) => {
+                return (
+                  <div key={`${index}-${event.id}`}>
+                    <h1>{event.title}</h1>
+                    <h3>Artist Lineup</h3>
+                    {event.performers.map((performer, i) => {
+                      return (
+                        <span key={`${i}-${performer.id}`}>
+                          <h4>{performer.name}</h4>
+                        </span>
+                      );
+                    })}
+
+                    <ul>
+                      <li>{event.datetime_utc}</li>
+                      <li>{event.venue.name}</li>
+                      <li>{event.venue.address}</li>
+                      <li>{event.venue.display_location}</li>
+                    </ul>
+
+                    <p></p>
+                  </div>
+                );
+              })}
+            </span>
+          )
         ) : (
           artists.performers.map((performer, index) => {
             return (
               <div
                 key={`${index}-${performer.id}`}
-                onClick={() => getArtistEvents(`${performer.slug}`)}
+                onClick={() => {
+                  setSelectedArtist(performer);
+                  getArtistEvents(`${performer.slug}`);
+                }}
               >
                 <Artist artist={performer}></Artist>
               </div>
