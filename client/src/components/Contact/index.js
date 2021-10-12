@@ -25,13 +25,13 @@ function Contact() {
    
        // isValid conditional statement
            if (!isValid) {
-               setErrorMessage('**Your email is invalid.**');
+               setErrorMessage('**email is invalid**');
            } else {
                setErrorMessage('');
            }  
        } else {
            if (!e.target.value.length) {
-           setErrorMessage(`**${e.target.name} is required.**`);
+           setErrorMessage(`**${e.target.name} is required**`);
        } else {
          setErrorMessage('');
        }
@@ -39,7 +39,7 @@ function Contact() {
    };
 
     return(
-    <section className = "contactform-container" id = "contact-us">
+    <section className = "contactform-container">
       <h1 className= "centered contitle">Contact Us</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
 
