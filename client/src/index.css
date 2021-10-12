@@ -1,7 +1,7 @@
 main {
   margin: 0 auto;
   max-width: 90%;
-  padding: 50px 30px;
+  padding: 10px 30px;
 }
 :root {
   --primary: rgb(50, 10, 53);
@@ -168,6 +168,7 @@ nav li:hover {
   text-align: center;
   font-size: 50px;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .about {
@@ -175,6 +176,20 @@ nav li:hover {
   border-color: black;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.384);
+  margin-bottom: 10px;
+}
+
+.aboutImage {
+  border-radius: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px;
+  background-image: url("https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position-x: center;
 }
 
 /* DONATIONS BOX */
@@ -355,4 +370,8 @@ button:hover {
   text-align: center;
   margin: 0px 10px 15px 10px;
   border-style: solid;
+}
+
+footer a {
+  margin: 0px 70px;
 }
