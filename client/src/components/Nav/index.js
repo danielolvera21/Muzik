@@ -10,7 +10,7 @@ function Nav(props) {
 
   return (
     <header>
-      <h1 className="header-title">Muzik</h1>
+      <h1 className="header-title"><a href = "/">Muzik</a></h1>
 
       <nav>
         <ul className="flex-row">
@@ -21,14 +21,7 @@ function Nav(props) {
               }`}
               key={category.name}
             >
-              <span 
-              className="nav-buttons"
-                onClick={() => {
-                  setCurrentCategory(category);
-                }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
+              <span className="nav-buttons" onClick={() => {setCurrentCategory(category);}}>{capitalizeFirstLetter(category.name)}</span>
             </li>
           ))}
         </ul>
