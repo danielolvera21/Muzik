@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Search from "./search";
 import Artist from "./artist";
-import Profile from "./artistprofile";
 
 var apiKey = "MjM4MDM5MDN8MTYzMzY1Mjk1MC45NTUyODc1";
 var clientSecret =
@@ -13,6 +12,12 @@ var apiUrl =
   clientSecret +
   "&q={searchValue}";
 
+var eventAPI =
+  "https://api.seatgeek.com/2/events?performers.slug={searchValue}&client_id=" +
+  apiKey +
+  "&client_secret=" +
+  clientSecret;
+
 function SearchArtist() {
   const [artistSelected, setArtistSelected] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -20,7 +25,7 @@ function SearchArtist() {
     performers: [],
     meta: {},
   });
-  const [events, setEvents] = useState({
+  const [event, setEvents] = useState({
     events: [],
     meta: {},
   });
@@ -53,10 +58,9 @@ function SearchArtist() {
 
   function getArtistEvents(searchValue) {
     setArtistSelected(true);
-    var apiString = apiUrl
+    var apiString = eventAPI
       .replace("{searchType}", "events")
-      .replace("{searchValue}", searchValue)
-      .replace(" ", "+");
+      .replace("{searchValue}", searchValue);
 
     callApi(apiString).then((jsonResponse) => {
       if (!jsonResponse.message) {
@@ -81,10 +85,11 @@ function SearchArtist() {
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : artistSelected ? (
-          events.events.map((events, index) => {
+          event.events.map((events, index) => {
             return (
               <div key={`${index}-${events.id}`}>
-                <Profile event={events}></Profile>
+                <h1>{events.title}</h1>
+                <p>{events.venue.name}</p>
               </div>
             );
           })
@@ -93,7 +98,7 @@ function SearchArtist() {
             return (
               <div
                 key={`${index}-${performer.id}`}
-                onClick={() => getArtistEvents(`${performer.id}`)}
+                onClick={() => getArtistEvents(`${performer.slug}`)}
               >
                 <Artist artist={performer}></Artist>
               </div>
