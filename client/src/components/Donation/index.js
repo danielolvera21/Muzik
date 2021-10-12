@@ -7,6 +7,9 @@ function Donation() {
             <p className = "donate-title" id = "contributions">
                 Donations Welcome
             </p>
+            <div className = "donate-slide-pay"> Put Slide Payment Function Here.
+
+            </div>
         </section>
     );
 }

@@ -41,7 +41,7 @@ function Contact() {
     return(
     <section className = "contactform-container">
       <h1 className= "centered contitle">Contact Us</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form className = "contact-form" id="contact-form" onSubmit={handleSubmit}>
 
         <div className= "conname">
             <label htmlFor="name">Name:</label>
@@ -63,8 +63,9 @@ function Contact() {
             <p className="error-text">{errorMessage}</p>
             </div>
         )}
-        
+        <div className = "center-button">
         <button type="submit">Submit</button>
+        </div>
     
       </form>
     </section>

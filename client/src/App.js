@@ -50,7 +50,11 @@ function App() {
           <Fillertwo></Fillertwo>
         </main>
       ) : currentCategory.name === "contact" ? (
+        <main>
+        <Filler></Filler>
+        <Fillertwo></Fillertwo>
         <Contact></Contact>
+        </main>
       ) : currentCategory.name === "donate" ? (
         <main>
           <DonationFillerFour></DonationFillerFour>
@@ -58,6 +62,7 @@ function App() {
           <DonationFillerTwo></DonationFillerTwo>
           <DonationFillerOne></DonationFillerOne>
           <DonationFillerThree></DonationFillerThree>
+        
         </main>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>

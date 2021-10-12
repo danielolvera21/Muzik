@@ -10,10 +10,13 @@ function Nav(props) {
 
   return (
     <header>
+      <nav className="loginStuff">
       <h1 className="header-title"><a href="/">Muzik</a></h1>
-      <h4 className="login-button"><a href="/">Log In</a></h4>
-      <h4 className="signup-button"><a href="/">Sign Up</a></h4>
-
+      <div className = "loginSpacing">
+      <a href="/">Log In</a>
+      <a href="/">Sign Up</a>
+      </div>
+      </nav>
       <nav>
         <ul className="flex-row">
           {categories.map((category) => (
