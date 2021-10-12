@@ -89,16 +89,32 @@ header {
 }
 
 .header-title {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
   text-align: left;
   margin-left: 176px;
+  margin-bottom: 0;
+}
+
+.login-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: right;
+  margin-right: 176px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.signup-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: right;
+  margin-right: 176px;
+  margin-top: 0;
 }
 
 header a:link {
   color: white;
 }
-header a:hover{
+header a:hover {
   color: white;
 }
 header a:active {
@@ -121,8 +137,8 @@ nav li {
 }
 
 nav li:hover {
-  color: rgba(50, 10, 53) ;
-  background-color: rgba(210, 204, 211, 0.7) ;
+  color: rgba(50, 10, 53);
+  background-color: rgba(210, 204, 211, 0.7);
   border-style: solid;
   border-color: rgba(50, 10, 53);
   border-radius: 10px;
@@ -162,7 +178,6 @@ nav li:hover {
   margin-bottom: 30px;
 }
 
-
 /* ABOUT STYLING */
 .about-head {
   text-align: center;
@@ -194,7 +209,7 @@ nav li:hover {
 
 /* DONATIONS BOX */
 .donate-box {
-  background-image: url('./assets/cover/donate-filler-image.jpg');
+  background-image: url("./assets/cover/donate-filler-image.jpg");
   background-attachment: fixed;
   background-size: cover;
   border-radius: 15px;
@@ -204,11 +219,11 @@ nav li:hover {
   margin: 0px 70px;
 }
 
-.donate-title{
+.donate-title {
   text-align: center;
   color: var(--primary);
   backdrop-filter: blur(10px);
-  font-size: 26px; 
+  font-size: 26px;
   border-radius: 10px;
   width: 400px;
   margin-left: 400px;
@@ -228,26 +243,26 @@ nav li:hover {
   color: black;
 }
 
-.contitle{
-    font-size: 36px;
-    color: white;
+.contitle {
+  font-size: 36px;
+  color: white;
 }
 
-.conname{
-margin-left: 477px;
-margin-bottom: 5px;
-color: white;
+.conname {
+  margin-left: 477px;
+  margin-bottom: 5px;
+  color: white;
 }
 
 .conaddress {
-color: white;
-margin-left: 397px;
-margin-bottom: 5px;
+  color: white;
+  margin-left: 397px;
+  margin-bottom: 5px;
 }
 
 .conmessage {
-color: white;
-margin-left: 455px;
+  color: white;
+  margin-left: 455px;
 }
 
 .conerror {
@@ -271,7 +286,7 @@ button {
   background-color: yellowgreen;
   color: rgb(50, 10, 53);
   border-radius: 10px;
-  margin-left: 612px ;
+  margin-left: 612px;
 }
 
 button:hover {
@@ -351,7 +366,7 @@ button:hover {
   margin-right: 425px;
 }
 
-.fillerdonatefour{
+.fillerdonatefour {
   border-radius: 10px;
   background-image: url("./assets/cover/donate-filler-image.jpg");
   background-size: cover;

@@ -36,18 +36,18 @@ function App() {
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       ></Nav>
-       {currentCategory.name === "home" ? (
+      {currentCategory.name === "home" ? (
         <main>
-        <Fillertwo></Fillertwo>
-        <Home></Home>
-        <Filler></Filler>
-        <Fillertwo></Fillertwo>
+          <Fillertwo></Fillertwo>
+          <Home></Home>
+          <Filler></Filler>
+          <Fillertwo></Fillertwo>
         </main>
-       ) : currentCategory.name === "about" ? (
+      ) : currentCategory.name === "about" ? (
         <main>
-        <Fillertwo></Fillertwo>
-        <About></About>
-        <Fillertwo></Fillertwo>
+          <Fillertwo></Fillertwo>
+          <About></About>
+          <Fillertwo></Fillertwo>
         </main>
       ) : currentCategory.name === "contact" ? (
         <Contact></Contact>
