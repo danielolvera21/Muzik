@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link, BrowserRouter as Router } from 'react-router-dom';
+import Auth from "../../utils/auth";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
@@ -10,13 +12,8 @@ function Nav(props) {
 
   return (
     <header>
-      <nav className="loginStuff">
       <h1 className="header-title"><a href="/">Muzik</a></h1>
-      <div className = "loginSpacing">
-      <a href="/">Log In</a>
-      <a href="/">Sign Up</a>
-      </div>
-      </nav>
+
       <nav>
         <ul className="flex-row">
           {categories.map((category) => (
