@@ -1,19 +1,17 @@
 main {
   margin: 0 auto;
   max-width: 90%;
-  padding: 50px 30px;
+  padding: 10px 30px;
 }
 :root {
   --primary: rgb(50, 10, 53);
   --secondary: #f3a847;
   --tertiary: #b12704;
-  --light: #fafafa;
   --dark: #000000;
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
 }
 
 * {
@@ -33,7 +31,7 @@ body {
   font-size: 18px;
   letter-spacing: 0.1em;
   background: rgb(50, 10, 53);
-  color: var(--light);
+  color: white;
 }
 
 /* COMMON STYLING */
@@ -41,54 +39,12 @@ body {
   text-align: center;
 }
 
-/*HEADER AND NAV BAR STYLING */
-
-.nav-buttons {
-  width: 150px;
-  height: 40px;
-  display: inline-block;
-  border-radius: 10px;
-  font-size: 25px;
-  color: white;
-  background-color: rgba(50, 10, 53, 0.822);
-  border-color: var(--primary);
-  padding-left: 10px;
+.rounded-edge {
+  border-radius: 55px;
 }
 
-.nav-buttons:link {
-  border-style: none;
-}
-
-.nav-buttons:visited {
-  border-style: solid;
-}
-
-.nav-buttons:hover {
-  color: rgb(32, 173, 3);
-  background-color: rgba(255, 255, 255, 0.63);
-  border-style: solid;
-  border-color: rgb(50, 10, 53);
-}
-
-header {
-  background-image: url("./assets/cover/cover-image.jpg");
-  background-size: cover;
-  background-position: 25%;
-  background-attachment: fixed;
-  border-style: solid;
-  border-color: yellowgreen;
-  border-radius: 10px;
-  margin-bottom: 5px;
-}
-
-.header-title {
-  color: white;
-  text-align: left;
-  margin-left: 176px;
-}
-
-li {
-  list-style: none;
+.rounded-edge-message {
+  border-radius: 18px;
 }
 
 .flex-row {
@@ -104,14 +60,10 @@ li {
   justify-content: flex-end;
 }
 
-.mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
-}
-
 .mx-2 {
-  margin-right: var(--spacing-two);
-  margin-left: var(--spacing-two);
+  font-size: 25px;
+  margin-right: 30px;
+  margin-left: 70px;
 }
 
 .my-1 {
@@ -124,9 +76,93 @@ li {
   margin-bottom: var(--spacing-two);
 }
 
-.my-5 {
-  margin-top: var(--spacing-five);
-  margin-bottom: var(--spacing-five);
+/*HEADER AND NAV BAR STYLING */
+
+header {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-position: 25%;
+  background-attachment: fixed;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.header-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  text-align: left;
+  margin-left: 176px;
+}
+
+.loginStuff {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+
+.loginSpacing {
+  background-color: green;
+  border-style: solid;
+  border-color: green;
+  margin: auto 0px auto 0px;
+}
+
+.login-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.signup-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header a:link {
+  color: white;
+}
+header a:hover {
+  color: white;
+}
+header a:active {
+  color: white;
+}
+header a:visited {
+  color: white;
+}
+
+nav li {
+  list-style: none;
+  color: white;
+  background-color: rgba(50, 10, 53, 0.822);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 115px;
+}
+
+nav li:hover {
+  color: rgba(50, 10, 53);
+  background-color: rgba(210, 204, 211, 0.7);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 116px;
+  cursor: pointer;
+}
+
+.navActive {
+  list-style: none;
+  color: white;
+  background-color: rgba(210, 204, 211, 0.7);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 115px;
 }
 
 /* HERO STYLING */
@@ -137,54 +173,181 @@ li {
   background-size: cover;
   background-position: center;
   border-style: solid;
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 10px;
+}
+
+/* HOME STYLING */
+.home {
+  margin-left: 160px;
+  margin-bottom: 30px;
 }
 
 /* ABOUT STYLING */
 .about-head {
   text-align: center;
-  font-size: larger;
+  font-size: 50px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.about-border {
+.about {
   border-style: solid;
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.428);
+  margin-bottom: 10px;
+}
+
+.aboutImage {
+  border-radius: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px;
+  background-image: url("https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position-x: center;
 }
 
 /* DONATIONS BOX */
 .donate-box {
-  background-color: yellowgreen;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-attachment: fixed;
+  background-size: cover;
   border-radius: 15px;
   color: rgb(50, 10, 53);
-  height: 100px;
+  height: 275px;
   padding-top: 10px;
-  margin: 50px 50px;
+  margin: 0px 70px 10px 70px;
 }
 
-/* CONTACT FORM CONTAINER */
+.donate-title {
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.donate-slide-pay{
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px;
+  border-radius: 10px;
+  height: 150px;
+  width: 400px;
+  margin: 55px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+/* CONTACT BOX CONTAINER */
 .contactform-container {
   background-image: url("./assets/cover/cover-image.jpg");
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 360px;
+  background-position: 80%;
+  height: 510px;
   background-size: cover;
   border-radius: 10px;
-  border-color: yellowgreen;
+  border-color: rgba(0, 0, 0, 0);
   border-style: solid;
-  color: #000000;
+  color: black;
+  margin: 10px 25px;
 }
 
-button:hover {
-  background-color: rgb(50, 10, 53);
-  color: yellowgreen;
+.contitle {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
   border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.conname {
+  margin: 10px auto;
+  color: black;
+}
+
+.conaddress {
+  color: black;
+  margin: 10px auto;
+}
+
+.conmessage {
+  color: black;
+  margin: 10px auto;
+}
+
+.conerror {
+  color: red;
+  font-size: large;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.755);
+  border-style: solid;
+  border-color: red;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0px auto 10px auto;
+}
+
+.center-button {
+  text-align: center;
+}
+
+.message-title {
+  padding-bottom: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: black;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contact-form input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 button {
-  background-color: yellowgreen;
+  background-color: rgb(50, 10, 53);
+  color: White;
+  border-radius: 10px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: white;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
   color: rgb(50, 10, 53);
   border-radius: 10px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: rgb(50, 10, 53);
 }
 
 /* ARTIST SEARCH STYLING */
@@ -229,8 +392,8 @@ button {
   background-image: url("./assets/cover/cover-image.jpg");
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
   height: 100px;
-  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 50px;
   margin-right: 400px;
@@ -241,12 +404,77 @@ button {
   background-image: url("./assets/cover/cover-image.jpg");
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
-  height: 100%;
-  padding-bottom: 20px;
+  background-position: 80%;
+  height: 100px;
+  margin-left: 500px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+.searched-artist {
+  width: 100%;
+  text-align: center;
+}
+
+.artist-search-button {
+  width: 100%;
+}
+
+.fillerdonateone {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 50px;
+}
+
+.fillerdonatetwo {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 400px;
+}
+
+.fillerdonatethree {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 425px;
+  margin-right: 425px;
+}
+
+.fillerdonatefour {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 150px;
 }
 
 /* FOOTER STYLING */
-
 .footer {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: center;
+  margin: 0px 10px 15px 10px;
+  border-style: solid;
+}
+
+footer a {
+  margin: 0px 70px;
 }
