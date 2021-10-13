@@ -91,10 +91,23 @@ function App() {
 
         </main>
       ) : currentCategory.name === "search" ? (
-        <SearchArtist></SearchArtist>
+        <main>
+          <SearchArtist></SearchArtist>
+        </main>
+      ) : currentCategory.name === "login" ? (
+        <main>
+          <ApolloProvider client={client}>
+            <Login></Login>
+          </ApolloProvider>
+        </main>
+      ) : currentCategory.name === "signup" ? (
+        <main>
+          <ApolloProvider client={client}>
+            <Signup></Signup>
+          </ApolloProvider>
+        </main>
       ) : (
         <></>
-
       )}
       <footer>
         <Footer></Footer>

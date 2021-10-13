@@ -17,25 +17,8 @@ function Nav(props) {
 
   return (
     <header>
-      <div className="loginStuff">
-        <h1 className="header-title"><a href="/">Muzik</a></h1>
-        <nav className="loginSpacing">
-          <Router>
-            {Auth.loggedIn() ? (
-              <>
-                <a href="/" onClick={logout}>
-                  Logout
-                </a>
-              </>
-            ) : (
-              <>
-                <Link to="/login">Log In</Link>
-                <Link to="/signup">Sign Up</Link>
-              </>
-            )}
-          </Router>
-        </nav>
-      </div>
+      <h1 className="header-title"><a href="/">Muzik</a></h1>
+
       <nav>
         <ul className="flex-row">
           {categories.map((category) => (
