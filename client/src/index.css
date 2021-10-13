@@ -358,14 +358,13 @@ button:hover {
 
 .artist-search-button {
   width: 40%;
-  background-color:  rgb(65, 34, 121);
+  background-color: rgb(65, 34, 121);
   position: relative;
   color: white;
 }
 
-
 .artist-search {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 5px 5px rgba(66, 35, 122, 0.75);
   transition: 0.3s;
   width: 400px;
   background-color: rgb(65, 34, 121);
@@ -400,6 +399,36 @@ button:hover {
 }
 
 /* ARTIST PROFILE STYLING */
+
+.artist-event-wrapper {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: rgba(66, 35, 122, 0.75);
+  border-radius: 10px;
+  height: 300px;
+  margin: 10px;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  box-shadow: 10px 5px 5px rgba(66, 35, 122, 0.75);
+}
+
+.artist-event-name {
+  margin: 0;
+}
+
+.artist-profile-name {
+  margin: 0;
+}
+
+.artist-event-details {
+  list-style-type: none;
+}
+
+.artist-lineup {
+  margin: 0;
+}
 
 /* FILLER STYLING */
 .fillerone {

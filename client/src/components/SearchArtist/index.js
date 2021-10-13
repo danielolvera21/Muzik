@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Search from "./search";
 import Artist from "./artist";
+import moment from "moment";
 
 var apiKey = "MjM4MDM5MDN8MTYzMzY1Mjk1MC45NTUyODc1";
 var clientSecret =
@@ -96,19 +97,24 @@ function SearchArtist() {
               <Artist artist={selectedArtist}></Artist>
               {event.events.map((event, index) => {
                 return (
-                  <div key={`${index}-${event.id}`}>
-                    <h1>{event.title}</h1>
-                    <h3>Artist Lineup</h3>
+                  <div
+                    key={`${index}-${event.id}`}
+                    className="artist-event-wrapper"
+                  >
+                    <h1 className="artist-event-name">{event.title}</h1>
+                    <h3 className="artist-lineup">Artist Lineup</h3>
                     {event.performers.map((performer, i) => {
                       return (
                         <span key={`${i}-${performer.id}`}>
-                          <h4>{performer.name}</h4>
+                          <h4 className="artist-profile-name">
+                            {performer.name}
+                          </h4>
                         </span>
                       );
                     })}
 
-                    <ul>
-                      <li>{event.datetime_utc}</li>
+                    <ul className="artist-event-details">
+                      <li>{moment(event.datetime_local).format('lll')}</li>
                       <li>{event.venue.name}</li>
                       <li>{event.venue.address}</li>
                       <li>{event.venue.display_location}</li>
