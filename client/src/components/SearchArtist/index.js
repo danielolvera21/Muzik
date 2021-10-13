@@ -80,7 +80,7 @@ function SearchArtist() {
         Search for An Artist
       </h1>
       <Search search={search}></Search>
-      <div className="artists">
+      <div className="artist-wrapper">
         {loading && !errorMessage ? (
           <span>loading...</span>
         ) : errorMessage ? (
@@ -124,7 +124,6 @@ function SearchArtist() {
           artists.performers.map((performer, index) => {
             return (
               <div
-                className="artist-wrapper"
                 key={`${index}-${performer.id}`}
                 onClick={() => {
                   setSelectedArtist(performer);

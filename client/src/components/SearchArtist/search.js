@@ -26,7 +26,7 @@ function Search(props) {
         onChange={handleSearchInputChanges}
         type="text"
         id="query"
-        className="searched-artist"
+        className="searched-artist-bar"
         placeholder="Search for an Artist..."
       />
       <input
