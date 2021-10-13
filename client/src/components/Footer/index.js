@@ -11,7 +11,7 @@ function Footer() {
     return (
         <section className="footer">
             <h2>Made with Questionable Confidence by BMD Squared, Inc. </h2>
-            <div class="social-container">
+            <div className="social-container">
 
                 <a href="https://github.com/danielolvera21/Muzik"
                     rel="noreferrer"
