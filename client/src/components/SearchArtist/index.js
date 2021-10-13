@@ -12,14 +12,21 @@ var apiUrl =
   clientSecret +
   "&q={searchValue}";
 
+var eventAPI =
+  "https://api.seatgeek.com/2/events?performers.slug={searchValue}&client_id=" +
+  apiKey +
+  "&client_secret=" +
+  clientSecret;
+
 function SearchArtist() {
   const [artistSelected, setArtistSelected] = useState(false);
+  const [selectedArtist, setSelectedArtist] = useState({});
   const [loading, setLoading] = useState(false);
   const [artists, setArtists] = useState({
     performers: [],
     meta: {},
   });
-  const [events, setEvents] = useState({
+  const [event, setEvents] = useState({
     events: [],
     meta: {},
   });
@@ -41,7 +48,7 @@ function SearchArtist() {
 
     callApi(apiString).then((jsonResponse) => {
       if (!jsonResponse.message) {
-        setArtists({ ...jsonResponse });
+        setArtists(jsonResponse);
         setLoading(false);
       } else {
         setErrorMessage(jsonResponse.message);
@@ -52,14 +59,13 @@ function SearchArtist() {
 
   function getArtistEvents(searchValue) {
     setArtistSelected(true);
-    var apiString = apiUrl
+    var apiString = eventAPI
       .replace("{searchType}", "events")
-      .replace("{searchValue}", searchValue)
-      .replace(" ", "+");
+      .replace("{searchValue}", searchValue);
 
     callApi(apiString).then((jsonResponse) => {
       if (!jsonResponse.message) {
-        setEvents({ ...jsonResponse });
+        setEvents(jsonResponse);
         setLoading(false);
       } else {
         setErrorMessage(jsonResponse.message);
@@ -80,13 +86,50 @@ function SearchArtist() {
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : artistSelected ? (
-          <></>
+          event.events.length === 0 ? (
+            <span>
+              <Artist artist={selectedArtist}></Artist>
+              <p>no upcoming events</p>
+            </span>
+          ) : (
+            <span>
+              <Artist artist={selectedArtist}></Artist>
+              {event.events.map((event, index) => {
+                return (
+                  <div key={`${index}-${event.id}`}>
+                    <h1>{event.title}</h1>
+                    <h3>Artist Lineup</h3>
+                    {event.performers.map((performer, i) => {
+                      return (
+                        <span key={`${i}-${performer.id}`}>
+                          <h4>{performer.name}</h4>
+                        </span>
+                      );
+                    })}
+
+                    <ul>
+                      <li>{event.datetime_utc}</li>
+                      <li>{event.venue.name}</li>
+                      <li>{event.venue.address}</li>
+                      <li>{event.venue.display_location}</li>
+                    </ul>
+
+                    <p></p>
+                  </div>
+                );
+              })}
+            </span>
+          )
         ) : (
           artists.performers.map((performer, index) => {
             return (
               <div
+                className="artist-wrapper"
                 key={`${index}-${performer.id}`}
-                onClick={() => getArtistEvents(`${performer.id}`)}
+                onClick={() => {
+                  setSelectedArtist(performer);
+                  getArtistEvents(`${performer.slug}`);
+                }}
               >
                 <Artist artist={performer}></Artist>
               </div>

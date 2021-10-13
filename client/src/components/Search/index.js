@@ -2,7 +2,7 @@ import React from 'react';
 
 function Search() {
     return (
-        <section className = "search">
+        <section className = "searchs">
         </section>
     );
 }
