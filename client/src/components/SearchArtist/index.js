@@ -124,6 +124,7 @@ function SearchArtist() {
           artists.performers.map((performer, index) => {
             return (
               <div
+                className="artist-wrapper"
                 key={`${index}-${performer.id}`}
                 onClick={() => {
                   setSelectedArtist(performer);

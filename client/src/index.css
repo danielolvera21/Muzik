@@ -187,6 +187,42 @@ button {
   border-radius: 10px;
 }
 
+/* ARTIST SEARCH STYLING */
+
+.searched-artist {
+  width: 500px;
+  margin-left: 350px;
+}
+
+.artist-search-button {
+  width: 100px;
+  background-color: yellowgreen;
+  position: relative;
+}
+
+.artist-search {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 400px;
+  background-color: rgb(106, 25, 112);
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+}
+
+.artist-wrapper {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artist-search:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ARTIST PROFILE STYLING */
+
 /* FILLER STYLING */
 .fillerone {
   border-radius: 10px;
@@ -206,15 +242,7 @@ button {
   background-size: cover;
   background-attachment: fixed; /*rolling affect coupled with header*/
   height: 100%;
-}
-
-.searched-artist {
-  width: 100%;
-  text-align: center;
-}
-
-.artist-search-button {
-  width: 100%;
+  padding-bottom: 20px;
 }
 
 /* FOOTER STYLING */
