@@ -13,9 +13,33 @@ import DonationFillerThree from './components/DonationFillerThree';
 import DonationFillerFour from './components/DonationFillerFour';
 import Filler from './components/Filler';
 import Fillertwo from './components/Fillertwo';
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { setContext } from '@apollo/client/link/context';
 import "./App.css";
 
 function App() {
+
+  const httpLink = createHttpLink({
+    uri: '/graphql',
+  });
+
+  const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem('id_token');
+    return {
+      headers: {
+        ...headers,
+        authorization: token ? `Bearer ${token}` : '',
+      },
+    };
+  });
+
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache(),
+  });
 
   const [categories] = useState([
     { name: "home", description: "main page" },
@@ -24,6 +48,8 @@ function App() {
     { name: "donate", description: "donate to us" },
     { name: "search", description: "search an artist" },
     { name: "live", description: "Live shows" },
+    { name: "login", description: "logs you in" },
+    { name: "signup", description: "signs you up" }
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
@@ -51,9 +77,9 @@ function App() {
         </main>
       ) : currentCategory.name === "contact" ? (
         <main>
-        <Filler></Filler>
-        <Fillertwo></Fillertwo>
-        <Contact></Contact>
+          <Filler></Filler>
+          <Fillertwo></Fillertwo>
+          <Contact></Contact>
         </main>
       ) : currentCategory.name === "donate" ? (
         <main>
@@ -62,17 +88,33 @@ function App() {
           <DonationFillerTwo></DonationFillerTwo>
           <DonationFillerOne></DonationFillerOne>
           <DonationFillerThree></DonationFillerThree>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00c6f0b3a7ebd7012e8a26ba1b08ccf929df48c1
         </main>
       ) : currentCategory.name === "search" ? (
-        <SearchArtist></SearchArtist>
+        <main>
+          <SearchArtist></SearchArtist>
+        </main>
+      ) : currentCategory.name === "login" ? (
+        <main>
+          <ApolloProvider client={client}>
+            <Login></Login>
+          </ApolloProvider>
+        </main>
+      ) : currentCategory.name === "signup" ? (
+        <main>
+          <ApolloProvider client={client}>
+            <Signup></Signup>
+          </ApolloProvider>
+        </main>
       ) : (
         <></>
-
       )}
       <footer>
         <Footer></Footer>
       </footer>
-
     </div>
   );
 }
