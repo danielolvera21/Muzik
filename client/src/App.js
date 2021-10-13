@@ -62,7 +62,6 @@ function App() {
           <DonationFillerTwo></DonationFillerTwo>
           <DonationFillerOne></DonationFillerOne>
           <DonationFillerThree></DonationFillerThree>
-        
         </main>
       ) : currentCategory.name === "search" ? (
         <SearchArtist></SearchArtist>
