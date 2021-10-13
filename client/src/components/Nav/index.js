@@ -6,11 +6,6 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 function Nav(props) {
   const { categories = [], setCurrentCategory, currentCategory } = props;
 
-  const logout = event => {
-    event.preventDefault();
-    Auth.logout();
-  }
-
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
