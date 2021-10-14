@@ -24,6 +24,8 @@
     "concurrently": "^6.3.0"
   },
   "dependencies": {
+    "apollo-server-express": "^3.4.0",
+    "graphql": "^15.6.1",
     "mongoose": "^6.0.10"
   }
 }
