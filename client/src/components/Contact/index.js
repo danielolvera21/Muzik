@@ -54,7 +54,7 @@ function Contact() {
         </div>
         <div className = "conmessage">
             <label className = "message-title"  htmlFor="message">Message:</label>
-            <textarea className = "rounded-edge-message" name="message" rows="2" defaultValue={message} onBlur={handleChange} />
+            <textarea className = "rounded-edge-message" name="message" rows="3" defaultValue={message} onBlur={handleChange} />
         </div>
 
         {/* render error message in div */}

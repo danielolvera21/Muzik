@@ -77,9 +77,11 @@ function SearchArtist() {
 
   return (
     <section className="fillertwo">
-      <h1 className="about-head" id="about">
+      <div className = "searchtitle">
+      <h1>
         Search for An Artist
       </h1>
+      </div>
       <Search search={search}></Search>
       <div className="artist-wrapper">
         {loading && !errorMessage ? (
