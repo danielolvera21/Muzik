@@ -39,39 +39,35 @@ const Login = (props) => {
     };
 
     return (
-        <main className='flex-row justify-center mb-4'>
-            <div className='col-12 col-md-6'>
-                <div className='contactform-container'>
+                <div className='loginform-container'>
                     <h4 className='contitle'>Login</h4>
-                    <div className='card-body'>
+                    <div>
                         <form onSubmit={handleFormSubmit}>
-                            <input
-                                className='conaddress'
-                                placeholder='Your email'
+                            <input className = "conname rounded"
+                                placeholder='Your Email'
                                 name='email'
                                 type='email'
                                 id='email'
                                 value={formState.email}
                                 onChange={handleChange}
                             />
-                            <input
-                                className='conaddress'
-                                placeholder='******'
+                            <input className = "conaddress rounded"
+                                placeholder='Password'
                                 name='password'
                                 type='password'
                                 id='password'
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <button className='contitle' type='submit'>
+                            <div className = "centered">
+                            <button type='submit'>
                                 Submit
                             </button>
+                            </div>
                         </form>
                         {error && <div>Login failed</div>}
                     </div>
                 </div>
-            </div>
-        </main>
     );
 };
 

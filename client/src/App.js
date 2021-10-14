@@ -12,6 +12,8 @@ import DonationFillerTwo from './components/DonationFillerTwo';
 import DonationFillerThree from './components/DonationFillerThree';
 import DonationFillerFour from './components/DonationFillerFour';
 import Filler from './components/Filler';
+import Fillertwoagain from "./components/Fillertwoagain";
+import Fillerabout  from "./components/Fillerabout"
 import Fillertwo from './components/Fillertwo';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -42,14 +44,14 @@ function App() {
   });
 
   const [categories] = useState([
-    { name: "home", description: "main page" },
+    { name: "🏠", description: "main page" },
+    { name: "login", description: "logs you in" },
+    { name: "signup", description: "signs you up" },
     { name: "about", description: "about the website" },
-    { name: "contact", description: "contact us" },
-    { name: "donate", description: "donate to us" },
     { name: "search", description: "search an artist" },
     { name: "live", description: "Live shows" },
-    { name: "login", description: "logs you in" },
-    { name: "signup", description: "signs you up" }
+    { name: "donate", description: "donate to us" },
+    { name: "contact", description: "contact us" }
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
@@ -62,23 +64,23 @@ function App() {
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       ></Nav>
-      {currentCategory.name === "home" ? (
+      {currentCategory.name === "🏠" ? (
         <main>
-          <Fillertwo></Fillertwo>
+          <Fillertwoagain></Fillertwoagain>
           <Home></Home>
           <Filler></Filler>
-          <Fillertwo></Fillertwo>
+          <Fillertwoagain></Fillertwoagain>
         </main>
       ) : currentCategory.name === "about" ? (
         <main>
-          <Fillertwo></Fillertwo>
+          <Fillerabout></Fillerabout>
           <About></About>
-          <Fillertwo></Fillertwo>
+          <Fillerabout></Fillerabout>
         </main>
       ) : currentCategory.name === "contact" ? (
         <main>
           <Filler></Filler>
-          <Fillertwo></Fillertwo>
+          <Fillertwoagain></Fillertwoagain>
           <Contact></Contact>
         </main>
       ) : currentCategory.name === "donate" ? (
@@ -88,23 +90,29 @@ function App() {
           <DonationFillerTwo></DonationFillerTwo>
           <DonationFillerOne></DonationFillerOne>
           <DonationFillerThree></DonationFillerThree>
-
         </main>
       ) : currentCategory.name === "search" ? (
         <main>
+          <Filler></Filler>
+          <Fillertwoagain></Fillertwoagain>
           <SearchArtist></SearchArtist>
         </main>
       ) : currentCategory.name === "login" ? (
         <main>
+          <Filler></Filler>
           <ApolloProvider client={client}>
             <Login></Login>
           </ApolloProvider>
+          <Fillertwoagain></Fillertwoagain>
         </main>
       ) : currentCategory.name === "signup" ? (
         <main>
+          <Fillertwoagain></Fillertwoagain>
+          <Filler></Filler>
           <ApolloProvider client={client}>
             <Signup></Signup>
           </ApolloProvider>
+          <Fillertwoagain></Fillertwoagain>
         </main>
       ) : (
         <></>
