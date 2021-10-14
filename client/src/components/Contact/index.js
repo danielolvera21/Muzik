@@ -44,16 +44,22 @@ function Contact() {
       <form className = "contact-form" id="contact-form" onSubmit={handleSubmit}>
 
         <div className= "conname">
+            <div className = "indent">
             <label htmlFor="name">Name:</label>
+            </div>
               {/* add default , sync state of component using onChange attribute and function handleChange defined above */}
               <input className = "rounded-edge" type="text" defaultValue={name} onBlur={handleChange} name="name" />
         </div>
         <div className = "conaddress">
+            <div className = "indent">
             <label htmlFor="email">Email address:</label>
+            </div>
             <input className = "rounded-edge" type="email" defaultValue={email} onBlur={handleChange} name="email" />
         </div>
         <div className = "conmessage">
+            <div className = "indent">      
             <label className = "message-title"  htmlFor="message">Message:</label>
+            </div>
             <textarea className = "rounded-edge-message" name="message" rows="3" defaultValue={message} onBlur={handleChange} />
         </div>
 

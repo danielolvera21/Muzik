@@ -39,11 +39,11 @@ const Login = (props) => {
     };
 
     return (
-                <div className='loginform-container'>
+                <div className='loginform-container fit'>
                     <h4 className='contitle'>Login</h4>
                     <div>
                         <form onSubmit={handleFormSubmit}>
-                            <input className = "conname rounded"
+                            <input className = "loginname rounded"
                                 placeholder='Your Email'
                                 name='email'
                                 type='email'
@@ -51,7 +51,7 @@ const Login = (props) => {
                                 value={formState.email}
                                 onChange={handleChange}
                             />
-                            <input className = "conaddress rounded"
+                            <input className = "loginaddress rounded"
                                 placeholder='Password'
                                 name='password'
                                 type='password'
@@ -59,13 +59,13 @@ const Login = (props) => {
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <div className = "centered">
+                            {error && <div className = "conerror">Login failed</div>}
+                            <div className = "centered tenbelow">
                             <button type='submit'>
                                 Submit
                             </button>
                             </div>
                         </form>
-                        {error && <div>Login failed</div>}
                     </div>
                 </div>
     );
