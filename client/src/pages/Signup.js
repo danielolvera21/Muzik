@@ -10,7 +10,7 @@ const Signup = () => {
     // update state based on form input changes
     const handleChange = (event) => {
         const { name, value } = event.target;
-
+        console.log(name, value)
         setFormState({
             ...formState,
             [name]: value,
@@ -20,6 +20,9 @@ const Signup = () => {
     // submit form
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        //event.stopPropagation();
+        console.log(event.currentTarget)
+        console.log(formState)
 
         //use try/catch instead of promises to handle errors
         try {
@@ -69,8 +72,12 @@ const Signup = () => {
                             <button type='submit'>
                                 Submit
                             </button>
+<<<<<<< HEAD
                             </div>
                             {error && <div>Sign Up failed</div>}
+=======
+                            {/* {error && <div>Sign Up failed</div>} */}
+>>>>>>> 84f39d90506fbb940a3efd71151a53fc8ac0a74c
                         </form>
                     </div>
                 </div>
