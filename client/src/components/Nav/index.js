@@ -12,7 +12,7 @@ function Nav(props) {
 
   return (
     <header>
-      <h1 className="header-title"><a href="/">Muzik</a></h1>
+      <h1 className="header-title"><a href="/">LP Pulse</a></h1>
 
       <nav>
         <ul className="flex-row">

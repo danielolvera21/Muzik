@@ -34,15 +34,13 @@ const Signup = () => {
     };
 
     return (
-        <main className='flex-row justify-center mb-4'>
-            <div className='col-12 col-md-6'>
-                <div className='contactform-container'>
+                <div className='signupform-container'>
                     <h4 className='contitle'>Sign Up</h4>
                     <div className='card-body'>
                         <form onSubmit={handleFormSubmit}>
                             <input
-                                className='conaddress'
-                                placeholder='Your username'
+                                className='conaddress rounded'
+                                placeholder='Your Username'
                                 name='username'
                                 type='username'
                                 id='username'
@@ -50,8 +48,8 @@ const Signup = () => {
                                 onChange={handleChange}
                             />
                             <input
-                                className='conaddress'
-                                placeholder='Your email'
+                                className='conaddress rounded'
+                                placeholder='Your Email'
                                 name='email'
                                 type='email'
                                 id='email'
@@ -59,23 +57,23 @@ const Signup = () => {
                                 onChange={handleChange}
                             />
                             <input
-                                className='conaddress'
-                                placeholder='******'
+                                className='conaddress rounded'
+                                placeholder='Password'
                                 name='password'
                                 type='password'
                                 id='password'
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <button className='contitle' type='submit'>
+                            <div className = "centered" >
+                            <button type='submit'>
                                 Submit
                             </button>
+                            </div>
                             {error && <div>Sign Up failed</div>}
                         </form>
                     </div>
                 </div>
-            </div>
-        </main>
     );
 };
 
