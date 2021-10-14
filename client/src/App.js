@@ -49,7 +49,6 @@ function App() {
     { name: "signup", description: "signs you up" },
     { name: "about", description: "about the website" },
     { name: "search", description: "search an artist" },
-    { name: "live", description: "Live shows" },
     { name: "donate", description: "donate to us" },
     { name: "contact", description: "contact us" }
   ]);
