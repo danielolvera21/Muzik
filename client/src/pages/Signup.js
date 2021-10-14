@@ -72,12 +72,8 @@ const Signup = () => {
                             <button type='submit'>
                                 Submit
                             </button>
-<<<<<<< HEAD
                             </div>
                             {error && <div>Sign Up failed</div>}
-=======
-                            {/* {error && <div>Sign Up failed</div>} */}
->>>>>>> 84f39d90506fbb940a3efd71151a53fc8ac0a74c
                         </form>
                     </div>
                 </div>
