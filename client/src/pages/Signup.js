@@ -37,12 +37,12 @@ const Signup = () => {
     };
 
     return (
-                <div className='signupform-container'>
+                <div className='signupform-container fit'>
                     <h4 className='contitle'>Sign Up</h4>
                     <div className='card-body'>
                         <form onSubmit={handleFormSubmit}>
                             <input
-                                className='conaddress rounded'
+                                className='loginname rounded'
                                 placeholder='Your Username'
                                 name='username'
                                 type='username'
@@ -51,7 +51,7 @@ const Signup = () => {
                                 onChange={handleChange}
                             />
                             <input
-                                className='conaddress rounded'
+                                className='loginname rounded'
                                 placeholder='Your Email'
                                 name='email'
                                 type='email'
@@ -60,7 +60,7 @@ const Signup = () => {
                                 onChange={handleChange}
                             />
                             <input
-                                className='conaddress rounded'
+                                className='loginname rounded'
                                 placeholder='Password'
                                 name='password'
                                 type='password'
@@ -68,12 +68,12 @@ const Signup = () => {
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <div className = "centered" >
+                            {error && <div className="conerror">Sign Up failed</div>}
+                            <div className = "centered tenbelow" >
                             <button type='submit'>
                                 Submit
                             </button>
                             </div>
-                            {error && <div>Sign Up failed</div>}
                         </form>
                     </div>
                 </div>

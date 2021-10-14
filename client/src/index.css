@@ -62,6 +62,10 @@ body {
   justify-content: space-between;
 }
 
+.tenbelow {
+  margin-bottom: 10px;
+}
+
 /*HEADER AND NAV BAR STYLING */
 
 header {
@@ -201,6 +205,22 @@ nav li:hover {
   border-style: solid;
   color: black;
   margin: 0px 25px 10px 25px;
+}
+
+.loginname {
+  margin: 10px 475px;
+  color: rgb(50, 10, 53);
+  font-size: large;
+}
+
+.loginaddress {
+  color: rgb(50, 10, 53);
+  margin: 10px 475px;
+  font-size: large;
+}
+
+.fit {
+height: fit-content;
 }
 
 /* ABOUT STYLING */
