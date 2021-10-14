@@ -22,4 +22,4 @@ LP Pulse is a social engagement app that allows users to login and review the li
 
 Repo: https://github.com/danielolvera21/Muzik
 
-Deployed Site:
+Deployed Site: https://pure-chamber-70764.herokuapp.com/
