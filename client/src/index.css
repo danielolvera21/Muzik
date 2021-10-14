@@ -1,0 +1,599 @@
+main {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 10px 30px;
+}
+:root {
+  --primary: rgb(50, 10, 53);
+  --secondary: #f3a847;
+  --tertiary: #b12704;
+  --dark: #000000;
+  --darker: #111111;
+  --error: rgb(228, 46, 1);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  background: rgb(50, 10, 53);
+  color: white;
+}
+
+/* COMMON STYLING */
+.centered {
+  text-align: center;
+}
+.rounded {
+  border-radius: 5px;
+}
+
+.rounded-edge {
+  border-radius: 55px;
+}
+
+.rounded-edge-message {
+  border-radius: 18px;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 25px;
+  padding-left: 0px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/*HEADER AND NAV BAR STYLING */
+
+header {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-position: 25%;
+  background-attachment: fixed;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.header-title {
+  font-family:'Times New Roman', Times, serif;
+  color: white;
+  text-align: left;
+  margin-left: 176px;
+}
+
+.loginStuff {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+
+.loginSpacing {
+  background-color: green;
+  border-style: solid;
+  border-color: green;
+  margin: auto 0px auto 0px;
+}
+
+header a:link {
+  color: white;
+  font-size: 55px;
+  text-decoration: none;
+}
+header a:hover {
+  color: white;
+  font-size: 55px;
+}
+header a:active {
+  color: white;
+  font-size: 55px;
+}
+header a:visited {
+  color: white;
+  font-size: 55px;
+}
+
+nav li {
+  list-style: none;
+  color: white;
+  background-color: rgba(50, 10, 53, 0.822);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 115px;
+}
+
+nav li:hover {
+  color: rgba(50, 10, 53);
+  background-color: rgba(210, 204, 211, 0.7);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 116px;
+  cursor: pointer;
+}
+
+.navActive {
+  list-style: none;
+  color: white;
+  background-color: rgba(210, 204, 211, 0.7);
+  border-style: solid;
+  border-color: rgba(50, 10, 53);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+  width: 115px;
+}
+
+/* HERO STYLING */
+.hero {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
+/* HOME STYLING */
+.home {
+  margin: 20px 650px 20px 150px;
+}
+
+.home h2{
+  margin: 0px;
+}
+
+.home p {
+  margin: 0px;
+}
+
+/* LOGIN STYLING */
+.loginform-container{
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 225px;
+  background-size: cover;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  color: black;
+  margin: 0px 25px 10px 25px;
+
+}
+
+/* SIGN UP STYLING */
+
+.signupform-container{
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 280px;
+  background-size: cover;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  color: black;
+  margin: 0px 25px 10px 25px;
+
+}
+
+/* ABOUT STYLING */
+.about-head {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.about {
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.428);
+  margin-bottom: 10px;
+}
+
+.aboutImage {
+  border-radius: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px;
+  background-image: url("https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position-x: center;
+}
+
+.aboutpara {
+  text-align: center;
+  margin: 25px 250px 25px 250px;
+  border-left: solid;
+  border-right: solid;
+  border-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* DONATIONS BOX */
+.donate-box {
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 15px;
+  color: rgb(50, 10, 53);
+  height: 275px;
+  padding-top: 10px;
+  margin: 0px 70px 10px 70px;
+}
+
+.donate-title {
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.donate-slide-pay {
+  text-align: center;
+  color: var(--primary);
+  backdrop-filter: blur(10px);
+  font-size: 26px;
+  border-radius: 10px;
+  height: fit-content;
+  width: 400px;
+  margin: 55px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+/* CONTACT BOX CONTAINER */
+.contactform-container {
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: fit-content;
+  background-size: cover;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  color: black;
+  margin: 10px 25px;
+  padding-bottom: 10px;
+}
+
+.contitle {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.conname {
+  margin: 10px 475px;
+  color: Red;
+  font-size: large;
+}
+
+.conaddress {
+  color: red;
+  margin: 10px 475px;
+  font-size: large;
+}
+
+.conmessage {
+  color: red;
+  margin: 10px 475px;
+  font-size: large;
+}
+
+.conerror {
+  color: red;
+  font-size: large;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.755);
+  border-style: solid;
+  border-color: red;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0px auto 10px auto;
+}
+
+.center-button {
+  text-align: center;
+}
+
+.message-title {
+  padding-bottom: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: black;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contact-form input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+button {
+  background-color: rgb(50, 10, 53);
+  color: White;
+  border-radius: 10px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: white;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(50, 10, 53);
+  border-radius: 10px;
+  margin: 0px auto;
+  border-style: solid;
+  border-color: rgb(50, 10, 53);
+}
+
+/* ARTIST SEARCH STYLING */
+
+.searchtitle {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  width: 600px;
+  margin: 0px auto 10px auto;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.searched-artist {
+  width: 80px;
+}
+
+.artist-search-button {
+  width: 40%;
+  background-color: rgb(65, 34, 121);
+  position: relative;
+  color: white;
+}
+
+.artist-search {
+  box-shadow: 10px 5px 5px rgba(66, 35, 122, 0.75);
+  transition: 0.3s;
+  width: 400px;
+  background-color: rgb(65, 34, 121);
+  border-radius: 10px;
+  height: 350px;
+  margin: 10px;
+  padding: 0 15px 15px 15px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.artist-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.artist-name {
+  height: 60px;
+}
+
+.search {
+  width: 100%;
+  text-align: center;
+}
+
+.artist-search:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ARTIST PROFILE STYLING */
+
+.artist-event-wrapper {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: rgba(66, 35, 122, 0.75);
+  border-radius: 10px;
+  height: 300px;
+  margin: 10px;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  box-shadow: 10px 5px 5px rgba(66, 35, 122, 0.75);
+}
+
+.artist-event-name {
+  margin: 0;
+}
+
+.artist-profile-name {
+  margin: 0;
+}
+
+.artist-event-details {
+  list-style-type: none;
+}
+
+.artist-lineup {
+  margin: 0;
+}
+
+/* FILLER STYLING */
+.fillerone {
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 400px;
+}
+
+.fillertwo {
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 100%;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.fillertwoagain{
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 400px;
+  margin-right: 50px;
+}
+
+.fillerabout{
+  border-radius: 10px;
+  background-image: url("./assets/cover/cover-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  background-position: 80%;
+  height: 100px;
+  margin: 0px auto 10px auto;
+  width: 800px;
+}
+
+
+.searched-artist-bar {
+  text-align: center;
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.artist-search-button {
+  width: 75px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.fillerdonateone {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 50px;
+}
+
+.fillerdonatetwo {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 400px;
+}
+
+.fillerdonatethree {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 425px;
+  margin-right: 425px;
+}
+
+.fillerdonatefour {
+  border-radius: 10px;
+  background-image: url("./assets/cover/donate-filler-image.jpg");
+  background-size: cover;
+  background-attachment: fixed; /*rolling affect coupled with header*/
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+  margin-right: 150px;
+}
+
+/* FOOTER STYLING */
+.footer {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: center;
+  margin: 0px 10px 15px 10px;
+  border-style: solid;
+}
+
+footer a {
+  margin: 0px 70px;
+}
